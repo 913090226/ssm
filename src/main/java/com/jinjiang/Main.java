@@ -34,6 +34,6 @@ public class Main {
     	List<Employee> employees = employeeMapper.findAll();
     	
     	sqlSession.close();
-    	System.out.println(name1+";"+name2);
+    	System.out.println(name1+";"+name2+";");
     }
 }
