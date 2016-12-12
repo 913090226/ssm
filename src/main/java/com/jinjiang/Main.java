@@ -3,11 +3,13 @@ package com.jinjiang;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.List;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
+import com.jinjiang.domain.Employee;
 import com.jinjiang.mapper.IEmployeeMapper;
 
 /**
@@ -28,6 +30,8 @@ public class Main {
     	
     	IEmployeeMapper employeeMapper = sqlSession.getMapper(IEmployeeMapper.class);
     	String name2 = employeeMapper.findNameByEmpNo("1");
+    	
+    	List<Employee> employees = employeeMapper.findAll();
     	
     	sqlSession.close();
     	System.out.println(name1+";"+name2);
