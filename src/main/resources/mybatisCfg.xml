@@ -20,6 +20,7 @@
 	<!-- mapper配置 -->
 	<mappers>
 		<mapper resource="./mapper/IEmployeeMapper.xml"/>
+		<mapper resource="./mapper/IDepartmentMapper.xml"/>
 	</mappers> 
 	
 </configuration>
